@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.mycompany.mapascoebustos;
 
-import com.mycompany.mapascoebustos.Persona;
-import com.mycompany.mapascoebustos.Principal;
 import java.util.HashMap;
+import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -37,7 +38,7 @@ public class PrincipalTest {
         Principal p=new Principal();
         HashMap<Integer, Persona> mapa=p.llenarMapa();
         
-        String resultado=p.buscarPersona(999,mapa);
+        String resultado=p.buscarPersona(9999,mapa);
         
         assertEquals(resultado, "persona: Fernando"
                 + "\n   hijo: Orlando"
@@ -57,4 +58,5 @@ public class PrincipalTest {
         
         assertEquals(resultado, "SIN COINCIDENCIAS");
     }
+    
 }
